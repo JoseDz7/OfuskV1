@@ -93,7 +93,7 @@ mv $Nombre  $Ruta2
 
 echo -e "${verde}Listo!!${rojo} Presiona ${verde}ENTER ${rojo}para continar"
 read $ENTER
-OfuskV1
+bash OfuskV1
 
 elif [[ "${Preguntas}" == "2" || "${Preguntas}" == "02" ]]; then
 	clear
