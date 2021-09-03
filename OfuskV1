@@ -1,0 +1,126 @@
+#!/bin/bash
+
+#OfuskV1
+
+# CREATED X SHARKCODE
+
+# APRENDIZ
+clear
+#               COLORES RESALTADOS
+negro="\e[1;30m"
+azul="\e[1;34m"
+verde="\e[1;32m"
+cian="\e[1;36m"
+rojo="\e[1;31m"
+purpura="\e[1;35m"
+amarillo="\e[1;33m"
+blanco="\e[1;37m"
+#                 COLORES BAJOS
+black="\e[0;30m"
+blue="\e[0;34m"
+green="\e[0;32m"
+cyan="\e[0;36m"
+R="\e[0;31m"
+purple="\e[0;35m"
+yellow="\e[0;33m"
+W="\e[0;37m"
+#                  BANNER DE TEXTO UwU
+
+BannerOfusk(){
+	clear
+echo -e "
+ ██████╗ ███████╗██╗   ██╗███████╗██╗  ██╗██╗   ██╗ ██╗BASH.BASH
+██╔═══██╗██╔════╝██║   ██║██╔════╝██║ ██╔╝██║   ██║███║BASH.BASH
+██║   ██║█████╗  ██║   ██║███████╗█████╔╝ ██║   ██║╚██║CODE.BASH
+██║   ██║██╔══╝  ██║   ██║╚════██║██╔═██╗ ╚██╗ ██╔╝ ██║CODE.CODE
+╚██████╔╝██║     ╚██████╔╝███████║██║  ██╗ ╚████╔╝  ██║BASH.BASH
+ ╚═════╝ ╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═╝  ╚═══╝   ╚═╝BASH.BASH
+                     created by sharkcode" | lolcat
+}
+#===============================
+#        MENU V1.5
+#==============================
+Menu(){
+      BannerOfusk
+echo ""
+echo -e "${rojo}[${blanco} ¿? ${rojo}]${rojo} >>>${blanco} Menu V1 Primera Version.. "
+echo ""
+echo -e "${rojo}[${blanco} 01 ${rojo}]${red} >${rojo}>${red}>${blanco} Ofuscar script (bash)${rojo} :)${amarillo}                            ★"
+echo -e "${rojo}[${blanco} 02 ${rojo}]${red} >${rojo}>${red}>${blanco} Desofuscar script (bash)${rojo} :)"
+echo ""
+echo -e "${rojo}[${blanco} 05 ${rojo}]${red} >${rojo}>${red}>${rojo} Salir :("
+echo -e -n "${rojo}
+${rojo}[${blanco} :D ${rojo}]${rojo} >>>${blanco} Escribe una opcion${rojo} :)
+
+${rojo}[${blanco} >> ${rojo}]${red} >>>" ${blanco}
+read -r Preguntas
+
+#============================
+#  PREGUNTANDO A EL USUARIO
+#============================
+
+if [[ "${Preguntas}" == "1" || "${Preguntas}" == "01" ]]; then
+	clear
+	BannerOfusk
+echo -e -n "${rojo}
+${rojo}[${blanco} :D ${rojo}]${rojo} >>>${blanco} Escribe una ruta${rojo} :)
+
+${rojo}[${blanco} :/ ${rojo}]${rojo} >>>${blanco} Ejemplo: /data/data/com.termux/files/home/Pornhud
+
+${rojo}[${blanco} >> ${rojo}]${red} >>>" ${blanco}
+read -r Enlace
+
+echo -e -n "${rojo}
+${rojo}[${blanco} :D ${rojo}]${rojo} >>>${blanco} Escribe un nuevo nombre xfa${rojo} :)
+
+${rojo}[${blanco} :/ ${rojo}]${rojo} >>>${blanco} Ejemplo: Pornhud.sh
+
+${rojo}[${blanco} >> ${rojo}]${red} >>>" ${blanco}
+read -r Nombre
+echo ""
+
+bash-obfuscate $Enlace -o $Nombre
+sleep 3
+echo -e "${rojo}[${blanco} :3 ${rojo}]${rojo} >>>${blanco} Listo tu script se encuentra en esta carpeta.. Lo movere a donde tu medigas.."
+
+echo -e -n "${rojo}
+${rojo}[${blanco} :D ${rojo}]${rojo} >>>${blanco} Escribe una nueva ruta para mover${rojo} :)
+
+${rojo}[${blanco} >> ${rojo}]${red} >>>" ${blanco}
+read -r Ruta2
+
+mv $Nombre  $Ruta2
+
+echo -e "${verde}Listo!!${rojo} Presiona ${verde}ENTER ${rojo}para continar"
+read $ENTER
+OfuskV1
+
+elif [[ "${Preguntas}" == "2" || "${Preguntas}" == "02" ]]; then
+	clear
+	BannerOfusk
+	echo ""
+echo -e "${verde} Esta opcion es premium.."
+echo ""
+echo -e "${verde}Listo!!${rojo} Presiona ${verde}ENTER ${rojo}para continuar"
+read $ENTER
+bash OfuskV1
+
+elif [[ "${Preguntas}" == "5" || "${Preguntas}" == "05" ]]; then
+	clear
+figlet Adios.. | lolcat
+echo -e "${verde} Gracias por ocupar mi script adios !!
+te amo <3 atte. Sharkcode"
+          sleep 3
+          exit
+else
+echo -e "${rojo}
+╔═══════════════════╗
+█ ${rojo}OPCIÓN INCORRECTA ${rojo}█
+╚═══════════════════╝
+"${rojo}
+	sleep 2
+	Menu
+fi
+}
+Menu
+
