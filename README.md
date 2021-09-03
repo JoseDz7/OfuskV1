@@ -17,7 +17,8 @@ cd OfuskV1
 
 chmod 775 *
 
-npm install -g bash-obfuscate
+npm install -g bash-obfuscate    (Android)
+npm i bash-obfuscate (PC)
 
 bash OfuskV1
 
