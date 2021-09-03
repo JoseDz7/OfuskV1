@@ -11,3 +11,14 @@ Clonar antes este repositorio para instalar sus rescursos básicos
 
 Instalación :
 
+git clone https://github.com/piratainformatico2/OfuskV1
+
+cd OfuskV1
+
+chmod 775 *
+
+npm install -g bash-obfuscate
+
+bash OfuskV1
+
+***Listo eso es todo !!***
